@@ -21,7 +21,8 @@
 		C129123E85D34A4BB2782D9C /* Manrope-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 308A5221E55A474582D4D847 /* Manrope-Medium.ttf */; };
 		5EAEC6E1B01C4E88BB639226 /* Manrope-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33190A97ADAD467A997086E1 /* Manrope-Regular.ttf */; };
 		6CEF4126F32B46A1B062D617 /* Manrope-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4AB91DF279694EDF83A4B007 /* Manrope-SemiBold.ttf */; };
-		42C091A576964C1EAA25D7BF /* RobotoFlex-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1F28703D9554B03A19BDA07 /* RobotoFlex-Regular.ttf */; };
+		3C3A5B956EB84364B63BE737 /* RobotoFlex-ExtraExpanded.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4250E268344D42C48A3CF579 /* RobotoFlex-ExtraExpanded.ttf */; };
+		3ED174CA626D4B538AFA0826 /* RobotoFlex-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94E49D7C720E40C69F0A8AB5 /* RobotoFlex-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +60,8 @@
 		308A5221E55A474582D4D847 /* Manrope-Medium.ttf */ = {isa = PBXFileReference; name = "Manrope-Medium.ttf"; path = "../assets/fonts/Manrope-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		33190A97ADAD467A997086E1 /* Manrope-Regular.ttf */ = {isa = PBXFileReference; name = "Manrope-Regular.ttf"; path = "../assets/fonts/Manrope-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		4AB91DF279694EDF83A4B007 /* Manrope-SemiBold.ttf */ = {isa = PBXFileReference; name = "Manrope-SemiBold.ttf"; path = "../assets/fonts/Manrope-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		C1F28703D9554B03A19BDA07 /* RobotoFlex-Regular.ttf */ = {isa = PBXFileReference; name = "RobotoFlex-Regular.ttf"; path = "../assets/fonts/RobotoFlex-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4250E268344D42C48A3CF579 /* RobotoFlex-ExtraExpanded.ttf */ = {isa = PBXFileReference; name = "RobotoFlex-ExtraExpanded.ttf"; path = "../assets/fonts/RobotoFlex-ExtraExpanded.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		94E49D7C720E40C69F0A8AB5 /* RobotoFlex-Regular.ttf */ = {isa = PBXFileReference; name = "RobotoFlex-Regular.ttf"; path = "../assets/fonts/RobotoFlex-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,7 +177,8 @@
 				308A5221E55A474582D4D847 /* Manrope-Medium.ttf */,
 				33190A97ADAD467A997086E1 /* Manrope-Regular.ttf */,
 				4AB91DF279694EDF83A4B007 /* Manrope-SemiBold.ttf */,
-				C1F28703D9554B03A19BDA07 /* RobotoFlex-Regular.ttf */,
+				4250E268344D42C48A3CF579 /* RobotoFlex-ExtraExpanded.ttf */,
+				94E49D7C720E40C69F0A8AB5 /* RobotoFlex-Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -284,7 +287,8 @@
 				C129123E85D34A4BB2782D9C /* Manrope-Medium.ttf in Resources */,
 				5EAEC6E1B01C4E88BB639226 /* Manrope-Regular.ttf in Resources */,
 				6CEF4126F32B46A1B062D617 /* Manrope-SemiBold.ttf in Resources */,
-				42C091A576964C1EAA25D7BF /* RobotoFlex-Regular.ttf in Resources */,
+				3C3A5B956EB84364B63BE737 /* RobotoFlex-ExtraExpanded.ttf in Resources */,
+				3ED174CA626D4B538AFA0826 /* RobotoFlex-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

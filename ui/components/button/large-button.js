@@ -4,9 +4,9 @@ import { Colors } from '../../../colors';
 
 const globalStyles = require('../../../global-styles');
 
-const LargeButton = ({ text, onPress, color = Colors.Blue, filled = true, style }) => {
+const LargeButton = ({ text, onPress, color = Colors.Blue, filled = true, style, disabled }) => {
     return (
-        <Pressable
+        <Pressable disabled={disabled}
             style={({ pressed }) => [{ borderColor: (pressed ? Colors.White : color), backgroundColor: filled ? color : null }, styles.button, style]}
             onPress={onPress}>
             <Text style={globalStyles.button_text}>{text}</Text>

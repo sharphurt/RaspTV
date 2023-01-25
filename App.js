@@ -14,6 +14,12 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import IpSettingsScreen from './ui/screens/welcome/ip-settings';
 import SourceSettingsScreen from './ui/screens/welcome/sources-settings';
 import HomeScreen from './ui/screens/home';
+import Settings from './ui/screens/settings';
+import AddRubricsScreen from './ui/screens/welcome/add-rubrics-screen';
+import GridGlobal from './ui/screens/grid/grid-global';
+import GridDay from './ui/screens/grid/grid-day';
+import GridSlot from './ui/screens/grid/grid-slot';
+import ScheduleToday from './ui/screens/schedule-today';
 
 const Stack = createNativeStackNavigator();
 
@@ -21,22 +27,32 @@ const App = () => {
     return (
         <NavigationContainer>
             <Stack.Navigator screenOptions={{ headerShown: false }}>
+                <Stack.Screen 
+                name='Settings' 
+                component={Settings} />
+
                 <Stack.Screen
                     name='HomeScreen'
-                    component={HomeScreen}
+                    component={HomeScreen} />
+
+                <Stack.Screen
+                    name='GridGlobal'
+                    component={GridGlobal}
                 />
                 <Stack.Screen
-                    name='WelcomeIpSettings'
-                    component={IpSettingsScreen}
+                    name='GridDay'
+                    component={GridDay}
                 />
                 <Stack.Screen
-                    name='WelcomeSourceSettings'
-                    component={SourceSettingsScreen}
+                    name='GridSlot'
+                    component={GridSlot}
                 />
+
                 <Stack.Screen
-                    name='WelcomeFinishSettings'
-                    component={FinishWelcomeScreen}
+                    name='ScheduleToday'
+                    component={ScheduleToday}
                 />
+
 
             </Stack.Navigator>
         </NavigationContainer>)

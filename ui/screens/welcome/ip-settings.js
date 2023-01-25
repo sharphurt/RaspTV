@@ -6,7 +6,7 @@ import { Colors } from '../../../colors';
 
 const globalStyles = require('../../../global-styles');
 
-const IpSettingsScreen = ({navigation}) => {
+const IpSettingsScreen = ({ navigation }) => {
     const ipMask = [/\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/];
     const portMask = [/\d/, /\d/, /\d/, /\d/];
 
@@ -15,7 +15,7 @@ const IpSettingsScreen = ({navigation}) => {
     }
 
     const onChangePort = (t) => {
-        
+
     }
 
     return (
@@ -27,7 +27,8 @@ const IpSettingsScreen = ({navigation}) => {
             </View>
 
             <View style={styles.bottom_container}>
-                <LargeButton text='Далее' onPress={() => navigation.navigate('WelcomeSourceSettings')} />
+                <LargeButton style={styles.leftButton} text='Пропустить' filled={false} onPress={() => navigation.navigate('HomeScreen')} />
+                <LargeButton text='Далее' onPress={() => navigation.navigate('AddRubricsScreen')} />
             </View>
         </SafeAreaView>
     );
@@ -43,6 +44,12 @@ const styles = StyleSheet.create({
 
     bottom_container: {
         alignItems: 'flex-end',
+        flexDirection: 'row',
+        alignSelf: 'flex-end'
+    },
+
+    leftButton: {
+        marginRight: 12
     },
 
     input: {

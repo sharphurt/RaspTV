@@ -3,21 +3,19 @@ import { StyleSheet } from 'react-native';
 
 module.exports = StyleSheet.create({
     header_1: {
-        fontFamily: 'RobotoFlex-Regular',
+        fontFamily: 'RobotoFlex-ExtraExpanded',
         fontSize: 32,
         fontWeight: '400',
         color: 'white',
-        fontStyle: 'italic',
         lineHeight: 38,
         marginBottom: 20
     },
 
     header_2: {
-        fontFamily: 'RobotoFlex-Regular',
+        fontFamily: 'RobotoFlex-ExtraExpanded',
         fontSize: 24,
         fontWeight: '400',
         color: 'white',
-        fontStyle: 'italic',
         lineHeight: 28
     },
 
@@ -60,5 +58,13 @@ module.exports = StyleSheet.create({
         fontWeight: '600',
         color: 'white',
         lineHeight: 13
+    },
+
+    small_hint_text: {
+        fontFamily: 'Manrope-SemiBold',
+        fontSize: 8,
+        fontWeight: '600',
+        color: 'white',
+        lineHeight: 10
     }
 });

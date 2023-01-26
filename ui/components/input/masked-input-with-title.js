@@ -5,8 +5,8 @@ import { Colors } from '../../../colors';
 
 const globalStyles = require('../../../global-styles');
 
-const MaskedInputWithTitle = ({ title, mask, keyboardType, placeholder, value, onChange, style }) => {
-    const [text, onChangeText] = React.useState(value)
+const MaskedInputWithTitle = ({ title, mask, keyboardType, placeholder, val, onChange, style }) => {
+    const [text, onChangeText] = React.useState(val)
 
     const onChangeValue = (t) => {
         onChangeText(t);
@@ -15,8 +15,8 @@ const MaskedInputWithTitle = ({ title, mask, keyboardType, placeholder, value, o
 
     return (
         <View style={[globalStyles.button_text, style]}>
-            <Text style={styles.field_header}>{title}</Text>
-            <MaskInput style={[globalStyles.button_text, styles.input]} value={text} mask={mask} onChangeText={t => onChangeValue(t)} keyboardType={keyboardType} placeholder={placeholder} placeholderTextColor={Colors.Blue} />
+            <Text style={[globalStyles.button_text, { marginBottom: 6 }]}>{title}</Text>
+            <MaskInput style={[globalStyles.button_text, styles.input, { borderRadius: 8 }]} value={text} mask={mask} onChangeText={t => onChangeValue(t)} keyboardType={keyboardType} placeholder={placeholder} placeholderTextColor={Colors.White} />
         </View>
     );
 };

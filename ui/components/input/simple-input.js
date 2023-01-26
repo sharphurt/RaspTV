@@ -4,8 +4,8 @@ import { Colors } from '../../../colors';
 
 const globalStyles = require('../../../global-styles');
 
-const SimpleInput = ({ keyboardType, placeholder, value, onChange, style, editable = true }) => {
-    const [text, onChangeText] = React.useState(value)
+const SimpleInput = ({ keyboardType, placeholder, val, onChange, style, editable = true }) => {
+    const [text, onChangeText] = React.useState(val)
 
     const onChangeValue = (t) => {
         onChangeText(t);
@@ -14,7 +14,7 @@ const SimpleInput = ({ keyboardType, placeholder, value, onChange, style, editab
 
     return (
         <View style={[styles.input_container, style]}>
-            <TextInput style={[globalStyles.button_text, styles.input]} editable={editable} value={text} onChangeText={t => onChangeValue(t)} keyboardType={keyboardType} placeholder={placeholder} placeholderTextColor={Colors.Blue} />
+            <TextInput style={[globalStyles.button_text, styles.input, { borderRadius: 8 }]} editable={editable} value={text} onChangeText={t => onChangeValue(t)} keyboardType={keyboardType} placeholder={placeholder} placeholderTextColor={Colors.White} />
         </View>
     );
 };

@@ -15,7 +15,7 @@ const MaskedInput = ({ mask, keyboardType, placeholder, value, onChange, style }
 
     return (
         <View style={[styles.input_container, style]}>
-            <MaskInput style={[globalStyles.button_text, styles.input]} value={text} mask={mask} onChangeText={t => onChangeValue(t)} keyboardType={keyboardType} placeholder={placeholder} placeholderTextColor={Colors.Blue} />
+            <MaskInput style={[globalStyles.button_text, styles.input,]} value={text} mask={mask} onChangeText={t => onChangeValue(t)} keyboardType={keyboardType} placeholder={placeholder} placeholderTextColor={Colors.Blue} />
         </View>
     );
 };

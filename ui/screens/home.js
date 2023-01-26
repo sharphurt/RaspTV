@@ -41,7 +41,7 @@ const HomeScreen = ({ navigation }) => {
                     </View>
                 </View>
                 <View style={styles.header_buttons_container}>
-                    <Text style={globalStyles.small_hint_text}>192.168.255.255:3615</Text>
+                    <Text style={globalStyles.small_hint_text}>http://catstack.net:5555</Text>
                     <View style={styles.header_buttons}>
                         <IconButton style={{ marginRight: 8 }} image={ReloadIcon} />
                         <IconButton image={PowerIcon} color={Colors.Red} onPress={() => startStream()} />
@@ -51,7 +51,7 @@ const HomeScreen = ({ navigation }) => {
             <View style={{ flexDirection: 'column' }}>
                 <View style={styles.home_buttons_container}>
                     <IconTextButton style={styles.icon_button} text='Программа стрима' image={ProgramIcon} onPress={() => { navigation.navigate('ScheduleToday') }} />
-                    <IconTextButton style={styles.icon_button} text='Конфигурация системы' image={SettingsIcon} onPress={() => { console.log('dsds') }} />
+                    <IconTextButton style={styles.icon_button} text='Конфигурация системы' image={SettingsIcon} onPress={() => { navigation.navigate('Settings') }} />
                 </View>
                 <View style={styles.home_buttons_container}>
                     <IconTextButton style={styles.icon_button} text='Настроить источники' image={SourcesIcon} onPress={() => { console.log('dsds') }} />

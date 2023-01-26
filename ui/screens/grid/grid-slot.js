@@ -17,7 +17,7 @@ const GridSlot = ({ route, navigation }) => {
     const { dayIndex, slotData, rubricsData } = route.params;
     const [rubrics, setRubrics] = React.useState(slotData.headings.map(heading => heading.name))
     const [modalVisible, setModalVisible] = React.useState(false);
-    const [modalSelectedRubric, setModalSelectedRubric] = React.useState(rubricsData.filter(rubric =>!rubrics.includes(rubric.name)).map(rubric => rubric.name)[0]);
+    const [modalSelectedRubric, setModalSelectedRubric] = React.useState(rubricsData.filter(rubric => !rubrics.includes(rubric.name)).map(rubric => rubric.name)[0]);
 
     days = ['понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресенье']
 
@@ -96,7 +96,7 @@ const GridSlot = ({ route, navigation }) => {
                             <Text style={[globalStyles.button_text, styles.modalHeader]}>Добавление рубрики</Text>
                             <View style={{ flexDirection: 'row', alignSelf: 'stretch', alignItems: 'center' }}>
                                 <View style={{ width: 16, height: 16, backgroundColor: getColorByRubric(modalSelectedRubric), borderRadius: 16, marginRight: 8 }} ></View>
-                                <ValuePicker values={rubricsData.filter(rubric =>!rubrics.includes(rubric.name)).map(rubric => rubric.name)} onSelect={(e) => setModalSelectedRubric(e)} />
+                                <ValuePicker values={rubricsData.filter(rubric => !rubrics.includes(rubric.name)).map(rubric => rubric.name)} onSelect={(e) => setModalSelectedRubric(e)} />
                                 {/* <SimpleInput style={{ flex: 1 }} onChange={setModalRubricName} placeholder='Имя' /> */}
                             </View>
                             <View style={styles.modalButtonContainer}>
@@ -117,13 +117,13 @@ const GridSlot = ({ route, navigation }) => {
                     <Text style={[{ fontFamily: 'RobotoFlex-ExtraExpanded', fontSize: 20, color: Colors.White, marginBottom: 8 }]}>{days[dayIndex]}, {slotData.hour.toString().padStart(2, '0') + ":00"}</Text>
                 </View>
 
-               {rubrics.length !== 0 && <View style={{ flexDirection: 'column', alignSelf: 'stretch' }}>
+                {rubrics.length !== 0 && <View style={{ flexDirection: 'column', alignSelf: 'stretch' }}>
 
                     {rubrics.map((heading) => (
                         <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignSelf: 'stretch', paddingVertical: 12, paddingHorizontal: 16, marginBottom: 8, backgroundColor: Colors.Background, borderRadius: 8 }}>
                             <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'flex-start' }}>
                                 <View style={{ borderRadius: 16, width: 16, height: 16, marginRight: 8, backgroundColor: getColorByRubric(heading) }} />
-                                <Text style={globalStyles.button_header_1}>{heading}</Text>
+                                <Text style={[globalStyles.button_header_1, {color: Colors.White}]}>{heading}</Text>
                             </View>
 
                             <SmallButton text='Удалить' color={Colors.Red} onPress={() => deleteRubric(heading)} />
@@ -132,13 +132,13 @@ const GridSlot = ({ route, navigation }) => {
                 </View>}
 
                 {
-                    rubrics.length === 0 && <Text style={[globalStyles.button_text, {alignSelf: 'center', textAlign: 'center', marginTop: 16}]}>
+                    rubrics.length === 0 && <Text style={[globalStyles.button_text, { alignSelf: 'center', textAlign: 'center', marginTop: 16 }]}>
                         В этом слоте не выбрано ни одной рубрики
                     </Text>
                 }
             </View>
             <View style={styles.bottom_container}>
-                <LargeButton disabled={rubrics.length >= 4} onPress={() => setModalVisible(true)} style={{ opacity: rubrics.length >= 4 ? 0.5 : 1 }} text='Добавить рубрику' />
+                <LargeButton disabled={rubricsData.filter(rubric => !rubrics.includes(rubric.name)).length === 0} onPress={() => setModalVisible(true)} style={{ opacity: rubricsData.filter(rubric => !rubrics.includes(rubric.name)).length === 0 ? 0.5 : 1 }} text='Добавить рубрику' />
             </View>
         </SafeAreaView >
     );
